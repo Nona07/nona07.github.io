@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.c-fadein {
+    opacity: 0;
+    transform: translate(0,20px);
+    transition: all .3s linear;
+}
+
+.c-fadein.is-scrollin {
+    opacity: 1;
+    transform: translate(0,0);
+}

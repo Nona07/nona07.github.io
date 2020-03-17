@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*----------------------------------------------------
+	margin
+----------------------------------------------------*/
+
+// margin:0px ~ margin: 100px
+@for $i from 0 through 100 {
+    .m#{$i * 5} {
+      margin:#{$i * 5}px;
+    }
+}
+// margin-top:0px ~ margin-top:100px
+@for $i from 0 through 100 {
+    .mt#{$i * 5} {
+      margin-top:#{$i * 5}px;
+    }
+}
+// margin-bottom:0px ~ margin-bottom:100px
+@for $i from 0 through 100 {
+    .mb#{$i * 5} {
+      margin-bottom:#{$i * 5}px;
+    }
+}
+// margin-left:0px ~ margin-left:100px
+@for $i from 0 through 100 {
+    .ml#{$i * 5} {
+      margin-left:#{$i * 5}px;
+    }
+}
+// margin-right:0px ~ margin-right:100px
+@for $i from 0 through 100 {
+    .mr#{$i * 5} {
+      margin-right:#{$i * 5}px;
+    }
+}
+
+/*----------------------------------------------------
+	padding
+----------------------------------------------------*/
+
+// padding:0px ~ padding: 100px
+@for $i from 0 through 100 {
+    .p#{$i * 5} {
+      padding:#{$i * 5}px;
+    }
+}
+
+// padding-top:0px ~ padding-top:100px
+@for $i from 0 through 100 {
+    .pt#{$i * 5} {
+      padding-top:#{$i * 5}px;
+    }
+}
+// padding-bottom:0px ~ padding-bottom:100px
+@for $i from 0 through 100 {
+    .pb#{$i * 5} {
+      padding-bottom:#{$i * 5}px;
+    }
+}
+// padding-left:0px ~ padding-left:100px
+@for $i from 0 through 100 {
+    .pl#{$i * 5} {
+      padding-left:#{$i * 5}px;
+    }
+}
+// padding-right:0px ~ padding-right:100px
+@for $i from 0 through 100 {
+    .pr#{$i * 5} {
+      padding-right:#{$i * 5}px;
+    }
+}
