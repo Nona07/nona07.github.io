@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+.p-jidotype{
+    width: 100%;
+	padding: 0;
+	margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    background: $white;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        position: absolute;
+        top: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 15px;
+    }
+    &--auto{
+        &::before{
+            background: linear-gradient(to right,#5001b2,#a1c3f3);
+        }
+    }
+    &--plug{
+        &::before{
+            background: linear-gradient(to right,#9f0021,#ff91b6);
+        }
+    }
+	&__inner{
+		width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &__heading-02{
+        &--auto{
+            padding: 30px 70px 20px;
+            @include media(middle) {
+                padding: 5vw 5vw 0;
+            }
+        }
+        &--plug{
+            padding: 40px 70px 30px;
+            @include media(middle) {
+                padding: 8vw 4vw 4vw;
+            }
+        }
+    }
+    &__product-main{
+        height: 460px;
+        width: 100%;
+        position: relative;
+        @include media(middle) {
+            height: unset;
+        }
+        figure{
+            position: absolute;
+        }
+        &--auto{
+            figure{
+                top: -140px;
+                right: 80px;
+                @include media(middle) {
+                    width: 22vw;
+                    top: -6vw;
+                    right: 10vw;
+                    // transform: translate(0,-50%);
+                }
+                // @include media(small) {
+                //     width: 24vw;
+                //     top: 18vw;
+                //     right: 5vw;
+                // }
+            }
+        }
+        &--plug{
+            figure{
+                top: -100px;
+                right: 20px;
+                @include media(middle) {
+                    width: 32vw;
+                    top: -7vw;
+                    right: 4vw;
+                }
+                // @include media(small) {
+                //     width: 28vw;
+                //     top: 18vw;
+                //     right: 5vw;
+                // }
+            }
+        }       
+    }
+    &__product-main-bg{
+        height: 380px;
+        width: 100%;
+        @include media(middle) {
+            margin-top: 20px;
+            height: calc(100vw * 0.35);
+            background-size: contain;
+        }
+        &--auto{
+            box-shadow:0px 0px 6px 3px rgba(110, 90, 200, 0.2);
+            background: url(../images/pickup/jidotype/auto/bg_product_main.jpg) center center no-repeat;
+            @include media(middle) {
+                background-size: cover;
+            }
+        }
+        &--plug{
+            box-shadow:0px 0px 6px 3px rgba(230, 60, 135, 0.2);
+            background: url(../images/pickup/jidotype/plug/bg_product_main.jpg) no-repeat;
+            @include media(middle) {
+                background-size: cover;
+            }
+        }
+    }
+    &__heading-03{
+        padding: 0;
+        margin: 0 auto;
+        @include media(middle) {
+            width: 90%;
+            padding-top: 40px;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__summary{
+        width: 880px;
+        padding: 60px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @include media(middle) {
+            width: 90%;
+            padding: 40px 0;
+        }
+        @include media(small) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &--auto{
+            border-bottom: 1px solid $purple;
+            min-height: 400px;
+            padding: 80px 0 0;
+            align-items: flex-start;
+            @include media(middle) {
+                min-height: 300px;
+                padding: 40px 0;
+           
+            }
+        }
+        &--plug{
+            border-bottom: 1px solid $pink;
+        }
+    }
+    &__summary-text{
+        display:block;
+        text-align: left;
+        .lead{
+            font-size: 3rem;
+            line-height: 1.6;
+            font-weight: bold;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            @include media(middle) {
+                font-size: 2.6rem;
+            }
+            @include media(small) {
+                font-size: 2.2rem;
+            }
+        }
+        &--auto{
+            .lead{
+                color: $purple;
+                border-left: 10px solid $purple;
+            }
+        }
+        &--plug{
+            .lead{
+                color: $pink;
+                border-left: 10px solid $pink;
+            }
+        }
+        .caution{
+            font-size: 12px;
+        }
+    }
+    &__summary-image{
+        @include media(small) {
+            width: 100%;
+            img{
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &--auto{
+            position: absolute;
+            top: 0;
+            right: -40px;
+            margin-bottom: 40px;
+            @include media(middle) {
+                width: 45%;
+                right: -20px;
+            }
+            @include media(small) {
+                width: 95%;
+                margin-top: 5%;
+                margin-left: 5%;
+                position: static;
+            }
+        }
+
+    }
+    &__detail{
+        width: 880px;
+        padding: 40px 0;
+        margin: 0 auto;
+        @include media(middle) {
+            width: 90%;
+            padding: 20px 0;
+        }
+        figure{
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__lineup-heading{
+        width: 1000px;
+        height: 70px;
+        margin: 0 auto;
+        text-align: center;
+        @include media(middle) {
+            width: 100%;
+        }
+        &--auto{
+            background: linear-gradient(to right,#5001b2,#a1c3f3);
+        }
+        &--plug{
+            background: linear-gradient(to right,#9f0021,#ff91b6);
+            padding: 10px 0;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__product-heading{
+        font-size: 24px;
+        margin: 40px auto 0;
+        position: relative;
+        &--auto{
+            span{
+            color: #6e5ac8;
+            }
+        }
+        &--plug{
+            span{
+            color: $pink;
+            }
+        }
+        span{
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            background: $white;
+            z-index: 3;
+        }
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: calc(50% + 2px);
+            left: 50%;
+            transform: translate(-50%);
+            width: 200px;
+            height: 2px;
+            display: block;
+            z-index: 2;
+            background-size: 6px;
+            
+            background-repeat: repeat-x;
+        }
+        &--auto{
+            &::after{
+                background-image: linear-gradient(to right, #5001b2, #5001b2 2px, transparent 2px, transparent 6px);
+            }
+        }
+        &--plug{
+            &::after{
+                background-image: linear-gradient(to right, $pink, $pink 2px, transparent 2px, transparent 6px);
+            }
+
+        }
+    }
+    &__lineup{
+        padding: 0 0 80px;
+        @include media(middle) {
+            padding: 0 0 60px;
+        }
+    }
+    &__lineup-block{
+        width: 900px;
+        min-height: 420px;
+        margin: 0 auto;
+        @include media(middle) {
+            width: 90%;
+        }
+        p{
+            font-weight: 400;
+        }
+        &--auto-spare{
+            position: relative;
+            margin: 0 auto 40px;
+            @include media(small) {
+                margin: 0 auto;
+            }
+        }
+    }
+    &__products{
+        display: flex;
+        margin: 40px auto 0;
+        @include media(middle) {
+            width: 100%;
+        }
+        @include media(small) {
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
+    &__product-item{
+        display: block;
+        margin: 0 auto;
+        @include media(small) {
+            padding: 20px 0;
+        }
+        figure{
+            display: block;
+            margin: 0 auto;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__spare{
+        width: 880px;
+        margin: 0 auto;
+        @include media(middle) {
+            width: 100%;
+        }
+    }
+    &__spare-image{
+        display: flex;
+        justify-content: space-between;
+        @include media(small) {
+            flex-wrap: wrap;
+        }
+        &--auto{
+            position: absolute;
+            bottom: 10px;
+            @include media(small) {
+                position: static;
+            }
+            figure{
+                margin: 0 20px;
+                @include media(middle) {
+                    margin: 0 16px;
+                }
+                @include media(small) {
+                    width: calc(33% - 40px);
+                    padding: 20px 0;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        &--plug{
+            margin: 40px auto;
+            figure{
+                @include media(small) {
+                    margin: 0 10px;
+                    width: calc(33% - 20px);
+                    padding: 20px 0;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    &__spare-pickup{
+        &--auto{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include media(small) {
+                position: static;
+                padding: 20px 0;
+                margin: 0 auto;
+                img{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    &__spare-link{
+        @include media(middle) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

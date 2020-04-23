@@ -1,0 +1,21 @@
+doctype html
+block vars
+html(lang="ja")
+  head
+    include pug/include/_inc_head.pug
+    include pug/include/_inc_gtag.html
+  body(class=key)
+    if key == 'lineup'
+      include pug/include/_inc_modal.pug
+    else if key == 'shoshuriki'
+      include pug/include/_inc_modal.pug
+    else
+    .l-wrapper
+      include pug/include/_inc_header.pug
+      .l-body-container#js-body-container
+        block contents
+      if key == 'shoshuriki'
+      else if key == 'jidotype'
+      else
+        include pug/include/_inc_page_footer.pug
+      include pug/include/_inc_footer.pug

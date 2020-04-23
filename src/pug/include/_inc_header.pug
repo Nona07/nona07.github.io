@@ -1,0 +1,44 @@
+header.l-header#js-header
+    button.l-header__button#js-header__button(type="button")
+        span
+    .l-header__inner
+        if key == 'top'
+             .l-header__logo.l-header__logo--top#js-header__logo
+                 a(href!=root_path)
+                    img.logo--top(src=image_path+"common/logo.png", alt="消臭力")
+        else
+            .l-header__logo#js-header__logo
+                a(href!=root_path)
+                    img.logo(src=image_path+"common/logo.png", alt="消臭力")
+        nav.l-header__menu#js-header__menu
+            ul.l-header__menu-list#js-header__menu-list
+                li: a(href!=root_path+"index.html") HOME
+                li
+                    a(href!=root_path+"about/") 消臭力について
+                li.has-multi
+                    a.hasDropdown(href!=root_path+"lineup/") ラインナップ
+                    span.js-acc_btn
+                    .l-header__sub
+                        ul.l-header__sub-list
+                            if key == 'lineup'
+                                li: a(href!="#item01") 玄関･お部屋用
+                                li: a(href!="#item02") トイレ用
+                                li: a(href!="#item03") ゴミ箱用
+                                li: a(href!="#item04") 車用     
+                            else
+                                li: a(href!=root_path+"lineup/#item01") 玄関･お部屋用
+                                li: a(href!=root_path+"lineup/#item02") トイレ用
+                                li: a(href!=root_path+"lineup/#item03") ゴミ箱用
+                                li: a(href!=root_path+"lineup/#item04") 車用                                                        
+                li.has-multi
+                    a.hasDropdown(href!=root_path+"pickup/") ピックアップ
+                    span.js-acc_btn
+                    .l-header__sub
+                        ul.l-header__sub-list
+                            li: a(href!=root_path+"pickup/shoshuriki.html") 消臭力（玄関・リビング用／トイレ用）
+                            li: a(href!=root_path+"pickup/premiumaroma.html") プレミアムアロマ
+                            li: a(href!=root_path+"pickup/mukotype.html") 無香タイプ（イオン消臭プラス）
+                            li: a(href!=root_path+"pickup/jidotype.html") 自動タイプ（電池式／プラグタイプ）
+                li: a(href!=root_path+"history/") ヒストリー
+                li: a(href!="#"): img.logo(src=image_path+"common/st-logo.png", alt="エステー")
+.l-header__overlay#js-header__overlay

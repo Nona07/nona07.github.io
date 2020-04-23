@@ -1,0 +1,364 @@
+@charset "utf-8";
+
+.l-wrapper {
+    overflow-x: hidden;
+	position: relative;
+	// &.is-hidden{
+	// 	position: fixed;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	left: 0;
+	// }
+}
+
+body{
+	&.is-hidden{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+	}
+}
+
+.l-body-container{
+	overflow: hidden;
+	margin: 0;
+	@include media(small) {
+		margin-top: 50px;
+	}
+}
+
+.l-page-heading{
+	padding: 0;
+	text-align: center;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f5f7fa;
+	@include media(small) {
+		height: 100px;
+	}
+	&__inner{
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+.l-page-header{
+	margin: 0 auto;
+	&--shoshuriki{
+		width: 100%;
+		height: 500px;
+		background:
+				url(../images/pickup/shoshuriki/bg_heading_01.jpg) center top /100% no-repeat;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include media(xlarge) {
+			background:
+				linear-gradient(rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.6) 90%, white) center bottom no-repeat,
+				url(../images/pickup/shoshuriki/bg_heading_01.jpg) center top -6vw /cover no-repeat,
+				linear-gradient(rgba(255, 255, 255, 0) 80%, white) center bottom no-repeat;
+		}
+		@include media(middle) {
+			min-width: auto;
+		}
+		@include media(small) {
+			min-width: auto;
+			height: unset;
+			background: transparent;
+		}
+	}
+	&--mukotype{
+		// min-width: 1300px;
+		width: 100%;
+		height: 500px;
+		background: url(../images/pickup/mukotype/bg_heading_01.jpg) center center /cover no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media(middle) {
+			min-width: auto;
+		}
+		@include media(small) {
+			min-width: auto;
+			height: unset;
+			background: transparent;
+		}
+	}
+	&--jidotype{
+		width: 100%;
+		max-height: 500px;
+		background:
+				linear-gradient(to right, #e3e3fd,#e3e3fd 50%,#fee2f9 51%,#fee2f9);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media(middle) {
+			min-width: auto;
+		}
+		@include media(small) {
+			min-width: auto;
+			height: unset;
+			background: transparent;
+		}
+	}
+	&__inner{
+		&--mukotype,
+		&--shoshuriki{
+			h1{
+				width: 90%;
+				margin: 0 auto;
+				@include media(small) {
+					width: 100%;
+				}
+			}
+		}
+		&--jidotype{
+			h1{
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+		img{
+			margin: 0 auto;
+		}
+	}
+}
+
+.l-page-mainvisual{
+	margin: 0 auto;
+	// min-width: 1300px;
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include media(middle) {
+		min-width: unset;
+	}
+	&--lineup{
+		height: 360px;
+		background: url(../images/lineup/bg_mainvisual.png) center center /cover no-repeat;
+	}
+	@include media(small) {
+		min-width: auto;
+		height: 320px;
+	}
+	&__inner{
+		img{
+			margin: 0 auto;
+			@include media(middle) {
+				width: 90%;
+			}
+		}
+	}
+}
+
+.l-page-footer{
+	padding: 0;
+	margin: 0 auto;
+	&__inner{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: $inner_width;
+		margin: 0 auto;
+		padding: 70px 0 100px;
+		&--jidotype{
+			padding: 0 0 100px;
+		}
+		@include media(small) {
+			padding: 35px 0 50px;
+			width: 100%;
+			&--jidotype{
+				padding: 0 0 50px;
+			}
+		}
+	}
+	&__menu-list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media(small) {
+			width: 100%;
+			flex-wrap: wrap;
+		}
+        li{
+			&:first-child{
+				a{
+					border-left: 1px solid #ccc;
+					@include media(small) {
+						border: none;
+					}
+				}
+			}
+			a{	
+				padding: 0 20px;
+				font-size: 1.8rem;
+				line-height: 1;
+				display: block;
+				color: $blue;
+				border-right: 1px solid #ccc;
+				@include media(small) {
+					padding: 10px 20px;
+					border: none;
+					color: $black;
+				}
+				@include media(xxsmall) {
+					font-size: 1rem;
+					padding: 0 5px;
+				}
+			}
+        }
+	}
+}
+
+.l-content-container{
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	&--top-about{
+		background: url(../images/common/bg_dotted.png) repeat;
+	}
+	&--top-lineup,
+	&--about-wish{
+		background: url(../images/common/bg_mesh.png) repeat;
+	}
+	&--top-history{
+		background: url(../images/top/bg_history.jpg) center center /cover no-repeat;
+		width: 100%;
+		height: 590px;
+		@include media(middle) {
+			background: url(../images/top/bg_history.jpg) center center /cover no-repeat;
+			width: 100%;
+			height: auto;
+			min-height: calc(100vw * 0.55);			
+		}
+	}
+	&--shoshuriki{
+		background: url(../images/pickup/shoshuriki/common/bg_wave_01.png) top 500px center /100% no-repeat,
+					url(../images/pickup/shoshuriki/common/bg_wave_02.png) top 3335px center /100% no-repeat,
+					url(../images/pickup/shoshuriki/common/bg_wave_03.png) bottom center /100% no-repeat,
+					url(../images/pickup/shoshuriki/common/bg_rough.png) repeat;
+		@include media(xlarge) {
+				background: url(../images/pickup/shoshuriki/common/bg_wave_01.png) top 500px center /100% no-repeat,
+							url(../images/pickup/shoshuriki/common/bg_wave_02.png) top 3335px center /100% no-repeat,
+							url(../images/pickup/shoshuriki/common/bg_wave_03.png) bottom -50vw center /100% no-repeat,
+							url(../images/pickup/shoshuriki/common/bg_rough.png) repeat;
+		}
+					
+	}
+	&--mukotype-summary{
+		background: url(../images/pickup/mukotype/bg_summary.jpg) center center /cover no-repeat;
+		@include media(middle) {
+			background: url(../images/pickup/mukotype/bg_summary.jpg) center top 30% /100% no-repeat;
+		}
+	}
+	&--use{
+		height: 920px;
+	}
+	&--jidotype-auto{
+		background:
+		linear-gradient(150deg, rgba(110, 90, 200, 1) 0, rgba(110, 90, 200, 0.5) 10%, rgba(176, 133, 186, 0.5),  rgba(176, 133, 186, 0.5) 60%,  rgba(110, 90, 200, 0.5)  75%, rgba(110, 90, 200, 1)  100%),
+			url(../images/pickup/jidotype/auto/bg_auto_01.png) top 20px right -2vw /20vw no-repeat,
+			url(../images/pickup/jidotype/auto/bg_auto_02.png) top 600px left -2vw /20vw no-repeat,
+			url(../images/pickup/jidotype/auto/bg_auto_03.png) top 1300px right -2vw /20vw no-repeat,
+			url(../images/pickup/jidotype/auto/bg_auto_04.png) bottom 200px left -2vw /25vw no-repeat;
+	}
+	&--jidotype-plug{
+		background:
+			linear-gradient(135deg,
+			rgba(223, 3, 119, 0.8),	rgba(223, 3, 119, 0.4) 5%,
+			rgba(255, 147, 183, 0.2) 16%,rgba(255,255,255,0.7) 29%, rgba(255,255,255,0.7) 31%, rgba(223, 3, 119, 0.2) 33%, rgba(223, 3, 119, 0.2) 34%, rgba(252,235,243,1) 36%, rgba(252,235,243,1) 40%,
+			rgba(255, 147, 183, 0.2) 46%,rgba(255,255,255,0.7) 59%, rgba(255,255,255,0.7) 61%, rgba(223, 3, 119, 0.2) 63%, rgba(223, 3, 119, 0.2) 64%, rgba(252,235,243,1) 66%, rgba(252,235,243,1) 70%,
+			rgba(252,235,243,1) 90%,
+			rgba(223, 3, 119, 0.4) 95%,rgba(223, 3, 119, 0.8) 100%);
+	}
+	&__inner{
+		width: $inner_width;
+		// min-width: 800px;
+		margin: 0 auto;
+		padding: 80px 0;
+		&--shoshuriki,
+		&--jidotype{
+			max-width: 1060px;
+			width: 95%;
+		}
+		&--top-about{
+			width: 1300px;
+			padding: 60px 0 80px;
+			overflow: hidden;
+		}
+		&--top-lineup{
+			min-width: 1200px;
+			width: 95%;
+			padding: 60px 0 80px;
+		}
+		&--full,
+		&--about{
+			width: 100%;
+			padding: 0;
+		}
+		&--use{
+			height: 920px;
+		}
+		&--top-history{
+			padding: 50px 0;
+		}
+		&--shoshuriki,
+		&--mukotype{
+			padding: 80px 0 0;
+		}
+		&--mukotype-summary{
+			width: 1300px;
+		}
+		&--mukotype-lineup{
+			padding: 0;
+		}
+		@include media(xmiddle) {
+			&--top-lineup{
+				min-width: 0;
+				width: 92vw;
+			}
+		}
+		@include media(middle) {
+			width: 95%;
+			min-width: auto;
+			&--about{
+				padding: 0;
+			}
+			&--about,
+			&--top-about{
+				width: 100%;			
+			}
+			&--full{
+				width: 100%;
+			}
+			&--top-lineup{
+				min-width: 0;
+				width: 92vw;
+			}
+		}
+		@include media(small) {
+			padding: 50px 0;
+			&--full{
+				padding: 0;
+			}
+			&--about{
+				padding: 0;
+			}
+			&--top-history{
+				padding: 20px 0;
+				width: 100%;
+			}
+			&--top-various{
+				padding: 100px 0;
+			}
+			&--mukotype{
+				padding: 40px 0 0;
+			}
+		}
+	}
+}

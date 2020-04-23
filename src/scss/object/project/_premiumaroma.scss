@@ -1,0 +1,655 @@
+@charset "utf-8";
+
+body.premiumaroma {
+
+	.content {
+		.inner {
+			max-width: $inner_width + 60px;
+			margin: 0 auto;
+			padding: 0 30px;
+
+			@media (max-width: 767px) {
+				padding: 0 15px;
+			}
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.sec-series {
+		.visual {
+			position: relative;
+			height: 0;
+			padding-top: 500px;
+			background-size: cover;
+			background-position: left top;
+			background-repeat: no-repeat;
+
+			@media (max-width: 1300px) {
+				padding-top: 500 / 1300 * 100%;
+			}
+
+			@media (max-width: 767px) {
+				padding-top: 500 / 750 * 100%;
+			}
+
+			h2 {
+				position: absolute;
+			}
+			.label {
+				position: absolute;
+				left: 0;
+			}
+		}
+		.content {
+			.lead {
+				margin-bottom: 50px;
+				padding-top: 50px;
+
+				@media (max-width: 767px) {
+					margin-bottom: 30px;
+					padding-top: 30px;
+				}
+			}
+			.fragrance {
+				padding-bottom: 50px;
+
+				@media (max-width: 767px) {
+					padding-bottom: 30px;
+				}
+
+				h3 {
+					margin-bottom: 40px;
+
+					@media (max-width: 767px) {
+						max-width: 80%;
+						margin: 0 auto 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.fragrance-series {
+		.visual {
+			background-image: url('../images/pickup/premiumaroma/fragrance/main.jpg');
+
+			@media (max-width: 767px) {
+				background-image: url('../images/pickup/premiumaroma/fragrance/main_sp.jpg');
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 450px;
+				height: 0;
+				padding-top: 100%;
+				background: no-repeat left top / 100% auto url('../images/pickup/premiumaroma/fragrance/main_layer.png');
+
+				@media (max-width: 1300px) {
+					width: 450 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					left: -2%;
+					width: 47%;
+				}
+			}
+			h2 {
+				top: 7%;
+				left: 22%;
+
+				@media (max-width: 1300px) {
+					width: 350 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					top: 2%;
+					left: 2%;
+					width: 52%;
+				}
+			}
+			.label {
+				bottom: 30px;
+
+				@media (max-width: 1300px) {
+					bottom: 6%;
+					width: 669 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					bottom: 4%;
+					width: 90%;
+				}
+			}
+		}
+		.content {
+			.inner {
+				position: relative;
+				z-index: 2;
+			}
+			.lead {
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					top: 0;
+					right: 0;
+					width: 283px;
+					height: 0;
+					padding-top: 100%;
+					background: no-repeat left top / 100% auto url('../images/pickup/premiumaroma/fragrance/bg_circle1.png');
+
+					@media (max-width: 1300px) {
+						width: 283 / 1300 * 100%;
+					}
+
+					@media (max-width: 767px) {
+						top: -15px;
+						right: -5%;
+						width: 30%;
+					}
+				}
+			}
+			.fragrance {
+				margin-bottom: -10%;
+				padding-bottom: 10%;
+				background: linear-gradient(to bottom, #fff, rgba(256, 256, 256, 0) 12%, rgba(256, 256, 256, 0) 88%, #fff),
+					repeat center / auto url('../images/pickup/premiumaroma/fragrance/bg.png');
+
+				h3 {
+					@media (max-width: 767px) {
+						max-width: 56%;
+					}
+				}
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin: 0 -10px;
+
+					&:after {
+						content: '';
+						width: 100%;
+					}
+					& > li {
+						flex-basis: calc(100% / 3 - 20px);
+						margin: 0 10px;
+
+						&:nth-child(1),
+						&:nth-child(2) {
+							margin-bottom: 20px;
+						}
+						&:not(:nth-child(1)):not(:nth-child(2)) {
+							order: 1;
+						}
+
+						@include media(middle) {
+							flex-basis: auto;
+							margin-bottom: 20px;
+						}
+
+						@media (max-width: 767px) {
+							flex-basis: 100%;
+						}
+
+						&:nth-child(1) .box {
+							background: linear-gradient(to bottom, #e85161, #ec6d7b 65px);
+						}
+						&:nth-child(2) .box {
+							background: linear-gradient(to bottom, #9371b0, #a588bd 65px);
+						}
+						&:nth-child(3) .box {
+							background: linear-gradient(to bottom, #822877, #974b8d 65px);
+						}
+						&:nth-child(4) .box {
+							background: linear-gradient(to bottom, #ba9c2d, #c5ac50 65px);
+						}
+						&:nth-child(5) .box {
+							background: linear-gradient(to bottom, #939c9d, #a5acad 65px);
+						}
+
+						.box {
+							max-width: 320px;
+							margin: 0 auto;
+							color: white;
+							text-align: center;
+							border-radius: 10px;
+
+							.fragrance_name {
+								height: 48px;
+								padding-top: 15px;
+							}
+							.fragrance_lavel {
+								display: flex;
+								align-items: flex-end;
+								height: 47px;
+								margin-bottom: 5px;
+								background: no-repeat left top / 100% auto url('../images/pickup/premiumaroma/fragrance/fragrance_lavel.png');
+							}
+							.image {
+								position: relative;
+
+								.product {
+									position: absolute;
+									left: 6px;
+									bottom: -28px;
+								}
+							}
+							.text {
+								padding: 30px 0;
+
+								@media (max-width: 767px) {
+									font-size: 14px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.more-detail {
+				&.more-detail-1 {
+					position: relative;
+					margin-top: 50px;
+
+					@media (max-width: 767px) {
+						margin-top: 20px;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						bottom: -140px;
+						left: 0;
+						width: 262px;
+						height: 0;
+						padding-top: 100%;
+						background: no-repeat left bottom / 100% auto url('../images/pickup/premiumaroma/fragrance/bg_circle2.png');
+
+						@media (max-width: 1300px) {
+							width: 262 / 1300 * 100%;
+							bottom: -25%;
+						}
+
+						@include media(small) {
+							bottom: 37%;
+							left: -8%;
+							width: 38%;
+						}
+					}
+				}
+				&.more-detail-2 {
+					padding-bottom: 60px;
+					background: linear-gradient(to bottom, #fff, rgba(256, 256, 256, 0) 12%),
+						repeat center / auto url('../images/pickup/premiumaroma/fragrance/bg.png');
+
+					@media (max-width: 767px) {
+						padding-bottom: 30px;
+					}
+				}
+
+				.text {
+					margin-bottom: 20px;
+				}
+				.text-3 {
+					@media (max-width: 767px) {
+						width: 77%;
+						margin: 0 auto 20px;
+					}
+				}
+				.image-1 {
+					margin-bottom: 40px;
+				}
+				.image-2 {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					margin-bottom: 15px;
+
+					li {
+						flex-basis: 50%;
+					}
+				}
+				.note {
+					font-size: 12px;
+					text-align: right;
+
+					@media (max-width: 767px) {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.modern-series {
+		background-color: #2e2724;
+
+		.visual {
+			background-image: url('../images/pickup/premiumaroma/modern/main.jpg');
+			background-position: left bottom;
+
+			@media (max-width: 767px) {
+				padding-top: 600 / 750 * 100%;
+				background-image: url('../images/pickup/premiumaroma/modern/main_sp.jpg');
+			}
+
+			h2 {
+				top: 7%;
+				right: 11%;
+
+				@media (max-width: 1300px) {
+					width: 285 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					top: 19%;
+					right: 4%;
+					width: 42%;
+				}
+			}
+			.label {
+				top: 40px;
+
+				@media (max-width: 1300px) {
+					top: 8%;
+					width: 655 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					top: 4%;
+					width: 87%;
+				}
+			}
+		}
+		.content {
+			background-image: url('../images/pickup/premiumaroma/modern/bg_top.jpg'),
+				url('../images/pickup/premiumaroma/modern/bg_bottom.jpg');
+			background-size: 100% auto;
+			background-position: left top, left bottom;
+			background-repeat: no-repeat;
+
+			@media (max-width: 1300px) {
+				background-size: auto;
+			}
+
+			.fragrance {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					margin: 0 -20px;
+
+					@include media(middle) {
+						margin: 0 -10px;
+					}
+
+					li {
+						flex-basis: calc(100% / 2 - 40px);
+						margin: 0 20px;
+
+						@include media(middle) {
+							flex-basis: calc(100% / 2 - 20px);
+							margin: 0 10px;
+						}
+
+						@media (max-width: 767px) {
+							flex-basis: 100%;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.aroma-series {
+		background: no-repeat center / cover url('../images/pickup/premiumaroma/aroma/bg.jpg');
+
+		.visual {
+			background-image: url('../images/pickup/premiumaroma/aroma/main.png');
+
+			@media (max-width: 767px) {
+				background-image: url('../images/pickup/premiumaroma/aroma/main_sp.png');
+			}
+
+			h2 {
+				bottom: 4%;
+				left: 7%;
+
+				@media (max-width: 1300px) {
+					width: 387 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					bottom: 2%;
+					left: 24%;
+					width: 51%;
+				}
+			}
+			.label {
+				top: 40px;
+
+				@media (max-width: 1300px) {
+					top: 8%;
+					width: 571 / 1300 * 100%;
+				}
+
+				@media (max-width: 767px) {
+					top: 4%;
+					width: 77%;
+				}
+			}
+		}
+		.content {
+			.lead {
+				padding-top: 30px;
+			}
+			.fragrance {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					margin: 0 -10px;
+
+					@include media(middle) {
+						justify-content: center;
+					}
+
+					li {
+						flex-basis: calc(100% / 3 - 20px);
+						margin: 0 10px;
+
+						@include media(middle) {
+							flex-basis: auto;
+							min-width: 320px;
+							margin-bottom: 20px;
+							text-align: center;
+						}
+
+						@media (max-width: 767px) {
+							flex-basis: 100%;
+							min-width: auto;
+						}
+
+						&:nth-child(1) .box {
+							background-image: url('../images/pickup/premiumaroma/aroma/fragrance1_bg.jpg');
+						}
+						&:nth-child(2) .box {
+							background-image: url('../images/pickup/premiumaroma/aroma/fragrance2_bg.jpg');
+							background-position: calc(50% - 50px) bottom;
+							@media (max-width: 767px) {
+								background-position: 98% bottom;
+							}
+						}
+						&:nth-child(3) .box {
+							background-image: url('../images/pickup/premiumaroma/aroma/fragrance3_bg.jpg');
+						}
+
+						.box {
+							max-width: 320px;
+							margin: 0 auto;
+							padding: 30px 10px 10px;
+							text-align: center;
+							background-color: #fff;
+							background-size: 100% auto;
+							background-position: calc(50% - 30px) bottom;
+							background-repeat: no-repeat;
+							border-radius: 10px;
+							box-shadow: 0px 0px 8px #c1a94b;
+							@media (max-width: 767px) {
+								position: relative;
+								padding: 35px 20% 35px 15px;
+								text-align: left;
+								background-size: 40% auto;
+								background-position: 100% bottom;
+							}
+
+							.fragrance_name {
+								padding-bottom: 20px;
+
+								@media (max-width: 767px) {
+									padding-bottom: 10px;
+
+									img {
+										height: 14px;
+										margin: 0;
+									}
+								}
+							}
+							.text {
+								padding-bottom: 15px;
+
+								@media (max-width: 767px) {
+									padding-bottom: 0;
+									font-size: 12px;
+								}
+							}
+
+							.product{
+								width: 100%;
+								text-align: right;
+								padding-bottom: 156px;
+								img{
+									width: 130px;
+									height: auto;
+									display: block;
+									margin: 0 auto;
+									@media (max-width: 767px) {
+										width: auto;
+										margin: 0 auto;
+									}
+								}
+							}
+
+							@media (max-width: 767px) {
+								.product {
+									position: absolute;
+									top: 10px;
+									right: 9%;
+									width: 15%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.lineup {
+		.content {
+			padding: 50px 0;
+
+			h2 {
+				margin-bottom: 40px;
+			}
+			.product-list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin: 0 -10px;
+
+				& > li {
+					flex-basis: calc(100% / 3 - 20px);
+					margin: 0 10px;
+
+					@media (max-width: 767px) {
+						flex-basis: 100%;
+						margin-bottom: 20px;
+					}
+
+					.box {
+						max-width: 320px;
+						margin: 0 auto;
+						padding: 25px;
+						text-align: center;
+						background-color: #fff;
+						border-radius: 10px;
+						box-shadow: 0px 0px 8px #ccc;
+
+						h3 {
+							margin-bottom: 20px;
+							padding-bottom: 20px;
+							background: no-repeat center bottom / auto url('../images/pickup/premiumaroma/lineup/title_line.png');
+						}
+						.product-btn {
+							a {
+								display: block;
+								max-width: 176px;
+								margin: 25px auto 0;
+								padding: 5px 25px;
+								color: #bc9b04;
+								border: solid 1px #bc9b04;
+								background: no-repeat calc(100% - 12px) center / auto url('../images/pickup/premiumaroma/lineup/icon_target.png'),
+									no-repeat 12px center / auto url('../images/pickup/premiumaroma/lineup/icon_arrow.png');
+							}
+						}
+					}
+
+					&.room {
+						flex-basis: 100%;
+						margin-bottom: 15px;
+
+						.box {
+							max-width: 100%;
+							padding: 25px 0;
+
+							@media (max-width: 767px) {
+								max-width: 320px;
+							}
+
+							ul {
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: space-between;
+								margin: 0 -10px;
+
+								& > li {
+									flex-basis: calc(100% / 3 - 20px);
+									margin: 0 10px;
+
+									@media (max-width: 767px) {
+										flex-basis: 100%;
+
+										&:not(:last-child) {
+											margin-bottom: 60px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

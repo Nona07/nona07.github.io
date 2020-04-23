@@ -1,0 +1,8 @@
+//- レイアウトファイルを継承
+extends ../../_layout.pug
+block vars
+  include ../../_config.pug
+  - var key = 'test'
+  - var page = pages[key]
+block contents
+  include ../include/_inc_test.html
